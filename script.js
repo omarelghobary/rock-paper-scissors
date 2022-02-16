@@ -10,10 +10,19 @@ paperBtn.addEventListener('click',paperPlay);
 const scissorsBtn = document.querySelector('#buttons .scissors');
 scissorsBtn.addEventListener('click', scissorsPlay);
 
+const againBtn = document.querySelector('#again');
+againBtn.addEventListener('click', reset);
+
+
+
+
+
 const user = document.querySelector('#scores .user .userResult');
 const computer = document.querySelector('#scores .computer .computerResult');
 const current = document.querySelector('#resultStatement .current');
 const final = document.querySelector('#resultStatement .final');
+
+
 
 
 
@@ -145,18 +154,34 @@ function computerPlay(){
        function checkWinner () {
 
         if (userScore == 5){
-            final.textContent = 'You Won, Reload the page to play again';;
+            final.textContent = 'You Won, It\'s your lucky day';;
             userScore = 0;
             computerScore =0;
             user.textContent = '0';
             computer.textContent ='0';
+            rockBtn.setAttribute('disabled','disabled');
+            paperBtn.setAttribute('disabled','disabled');
+            scissorsBtn.setAttribute('disabled','disabled');
+
+
         }
         else if (computerScore == 5){
-            final. textContent = 'You Lost,  Reload the page to play again';
+            final. textContent = 'You Lost,  Good luck next time';
             userScore = 0;
             computerScore =0;
             user.textContent = '0';
             computer.textContent ='0';
+            rockBtn.setAttribute('disabled','disabled');
+            paperBtn.setAttribute('disabled','disabled');
+            scissorsBtn.setAttribute('disabled','disabled');
         }
        }
     
+       function reset(){
+           current.textContent = '';
+        console.log(final.textContent = '');
+        rockBtn.removeAttribute('disabled');
+            paperBtn.removeAttribute('disabled');
+            scissorsBtn.removeAttribute('disabled');
+       }
+

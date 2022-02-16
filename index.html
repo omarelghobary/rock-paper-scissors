@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src = 'script.js' defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<div id = '#container'>
+<div id = 'container'>
+    <header>
+    <h1>Rock Paper Scissors</h1>
+    <h2> Get 5 and you win </h2>
+
+    </header>
     <div id ='buttons'>
         <button class = 'rock'>Rock</button>
         <button class = 'paper'>Paper</button>
@@ -16,7 +22,7 @@
     </div>
 
     <div id ='scores' >
-        <div class = user>UserScore: <div class="userResult"> 0</div></div>
+       <div class ="direction"> <div class = user>UserScore: <div class="userResult"> 0</div></div></div>
         <div class = 'computer'>ComputerScore: <div class="computerResult"> 0</div></div>
     </div>
 
@@ -24,7 +30,13 @@
         <div class = 'current'> </div>
         <div class = 'final'></div>
     </div>
+
+    <button id ='again'>Play Again</button>
 </div>
+    <footer>  
+    <div> Made By Omar Elghobary</div>
+     </footer>
+
     
     
 </body>
